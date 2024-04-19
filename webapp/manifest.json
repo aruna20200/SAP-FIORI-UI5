@@ -14,8 +14,15 @@
       "id": "@sap/generator-fiori:basic",
       "version": "1.13.2",
       "toolsId": "23bdc9e9-9ae2-4d34-baf2-5b1d0b91144b"
-    }
+    
   },
+  "dataSources": {
+    "GlobalModel":{
+      "uri": "model/GlobalModel.json",
+      "type": "JSON"
+    }
+  }
+},
   "sap.ui": {
     "technology": "UI5",
     "icons": {
