@@ -1,0 +1,48 @@
+<mvc:View
+    controllerName="ui5sample.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <!-- <Input id="idFirstNumber" type="Number"/>
+    <Input id="idSecondNumber" type="Number"/> -->
+    <!-- <Page id="page" title="{i18n>title}">
+        <content />
+    </Page> -->
+    <!-- First Number -->
+    <VBox >
+    <Label
+        id="idLabelFirstNumber"
+        labelFor="idFirstNumber"
+        text="Enter the First Number"
+    />
+    <Input
+        id="idFirstNumber"
+        type="Number"
+        value=""
+        placeholder="Enter a number"
+        width="40%"
+    />
+    </VBox>
+    <!-- second Number -->
+    <VBox >
+    <Label
+        id="idLabelSecondNumber"
+        labelFor="idSecondNumber"
+        text="Enter the Second Number"
+    />
+    <Input
+        id="idSecondNumber"
+        type="Number"
+        value=""
+        placeholder="Enter a number"
+        width="40%"
+    />
+    </VBox>
+    <Button
+        id="idcalculateButton"
+        text="Calculate"
+        press="onCalculate"
+    />
+    <Button id="idInitiateJsonModel" text="Initiate Json Model" press="onInitiateJsonModel"/>
+</mvc:View>
