@@ -64,6 +64,10 @@
         "settings": {
           "bundleName": "ui5sample.i18n.i18n"
         }
+      },
+      "":{
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "GlobalModel"
       }
     },
     "resources": {

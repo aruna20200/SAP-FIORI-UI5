@@ -19,7 +19,7 @@ sap.ui.define([
                     }
                 }
                 const oJsonModel = new JSONModel(oPerson);
-                this.getView().setModel(oJsonModel);
+                this.getView().setModel(oJsonModel, "employeeModel");
 
 
             }
