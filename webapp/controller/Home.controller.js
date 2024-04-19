@@ -1,35 +1,30 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel"
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller) {
+    function (Controller, JSONModel) {
         "use strict";
 
         return Controller.extend("ui5sample.controller.Home", {
             onInit: function () {
-
-            },
-            onCalculate:function(OEVent){
-                debugger;
-                // const iFirstNumber = this.getView().byId("idFirstNumber").getvalue()
-                // const oView = this.getView().byId("idFirstNumber").getvalue()
-                //Get The Values
-                const oView = this.getView(),
-                iFirstNumber = parseInt(oView.byId("idFirstNumber").getValue()),
-                iSecondNumber = parseInt(oView.byId("idSecondNumber").getValue());
-                //Addition Of the Values
-                const iResult = iFirstNumber + iSecondNumber;
-                // Print The Result
-                alert(iResult)
-            },
-            onInitiateJsonModel:function(){
-                const OPerson = {
-                    name:"Artihcus",
-                    age:"5"
+                const oPerson = {
+                    employee: {
+                        EmployeeName: "John Doe",
+                        EmployeeAge: 40,
+                        ContractStarted: new Date(),
+                        Email: "john.doe@gmail.com"
+                    }
                 }
-                debugger;
+                const oJsonModel = new JSONModel(oPerson);
+                this.getView().setModel(oJsonModel);
+
+
             }
+            
+            
+            
         });
     });
