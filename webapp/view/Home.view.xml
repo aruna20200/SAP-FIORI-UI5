@@ -5,7 +5,7 @@
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core">
-    <Table items="{/employee/}" alternateRowColors="true" growing="true" growingThreshold="5" growingScrollToLoad="true">
+    <!-- <Table items="{/employee/}" alternateRowColors="true" growing="true" growingThreshold="5" growingScrollToLoad="true">
         <columns>
             <Column >
                 <header>
@@ -36,5 +36,24 @@
                 <Text text="{gender}"></Text>
             </ColumnListItem>
         </items>
-    </Table>
+    </Table> -->
+    <l:VerticalLayout id="idVerticalLayout" binding="{/person}">
+
+    <!-- <Text text="First Name is:{/person/EmployeeName}"></Text>
+    <Text text="Employee Age is:{/person/EmployeeAge}"></Text>
+    <Text text="Contract Start Date:{/person/ContractStarted}"></Text>
+    <Text  text="Employee Email:{/person/Email}"></Text>     -->
+
+<!-- < we use some bitwisw/Ternary operator a?b:c> -->
+<!-- <{=${field}===40?true:false}> -->
+
+     <Text  text="First Name is:{/EmployeeName}"></Text> -->
+     <!-- <Input  value="{EmployeeAge}" editable="false"></Input> -->
+     <Input  value="{EmployeeAge}" editable="{=${EmployeeAge} > 40 ? false: true}"></Input>
+     <Text text="Contract Start Date:{ContractStarted}" ></Text>
+    <Text text="Employee Email:{Email}"></Text>
+
+
+
+    </l:VerticalLayout>
 </mvc:View>
